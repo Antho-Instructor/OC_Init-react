@@ -1,3 +1,4 @@
+import { useState } from "react";
 import User from "./components/User";
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
 			id: 3,
 		},
 	];
+
+	const [travel, setTravel] = useState(0);
 
 	return (
 		<section>
@@ -40,6 +43,8 @@ function App() {
 						key={user.id}
 						fullname={user.fullname}
 						student={user.student}
+						voyage={travel}
+						setVoyage={setTravel}
 					/>
 				);
 			})}
